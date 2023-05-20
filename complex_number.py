@@ -28,7 +28,7 @@ class Complex:
                     ans+=Fraction(i[0])
             imag = [int(ans)]
         else:
-            ans = imag[0][0]
+            ans = imag[0][0] if imag !=[] else 0
             if ans=='':
                 imag = [Fraction(1)]
             elif ans=='-':
