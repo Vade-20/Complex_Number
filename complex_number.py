@@ -1,5 +1,7 @@
 import re 
 from fractions import Fraction
+from math import sqrt
+
 class Complex:
     def __init__(self,complex_number:str):
         self.__complex_number = complex_number
@@ -109,11 +111,37 @@ class Complex:
         imag_new = f'+{imag_new}i' if imag_new>=0 else f'{imag_new}i'
         return Complex(f'{real_new}{imag_new}')
         
+    def congugate(self):
+        real_new = self.__real
+        imag_new = -self.__imag
+        imag_new = f'+{imag_new}i' if imag_new>=0 else f'{imag_new}i'
+        return Complex(f'{real_new}{imag_new}')
+    
+    def inverse(self):
+        real_new = (self.__real)/((self.__real**2)+(self.__imag**2))
+        imag_new = -(self.__imag)/((self.__real**2)+(self.__imag**2))
+        imag_new =f'+{imag_new}i'if imag_new>=0 else f'{imag_new}i'
+        return Complex(f'{real_new}{imag_new}')
+    
+    def modulous(self):
+        return sqrt((self.__real**2)+(self.__imag**2))
+    
+    def sqrt(self):
+        a = self.__real
+        b = self.__imag
+        real_new = Fraction(self.modulous()+a,2)
+        if b>0:
+            imag_new = Fraction(self.modulous()-a,2)
+        else:
+            imag_new = -Fraction(self.modulous()-a,2)
+            
+        imag_new = f'+{imag_new}i' if imag_new>=0 else f'{imag_new}i'
         
+        return f'√({real_new}{imag_new})'
+    
     def __str__(self) -> str:
         if self.iscomplex():
             return self.complex_number
         else:
             raise Exception ("Please enter a complex number")
         
-
