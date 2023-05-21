@@ -1,6 +1,6 @@
 # Complex Number Class
 
-This is a Python class that represents complex numbers. It provides various operations such as addition, subtraction, multiplication, and division on complex numbers. The class also includes methods to check if a given string represents a valid complex number and to format the complex number for display.
+This is a Python class that represents complex numbers. It provides various operations such as addition, subtraction, multiplication, and division on complex numbers. The class also includes methods to check if a given string represents a valid complex number.It take string as an argument.
 
 ## Usage
 
