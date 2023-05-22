@@ -1,6 +1,6 @@
 # Complex Number Operations
 
-This is a Python class that allows you to perform various operations on complex numbers. It provides methods for addition, subtraction, multiplication, division, conjugate, inverse, modulus, and square root of complex numbers.
+This is a Python class that allows you to perform various operations on complex numbers. It provides methods for addition, subtraction, multiplication, division, conjugate, inverse, moduli, and square root of complex numbers.
 
 ## Usage
 
@@ -54,12 +54,12 @@ To calculate the inverse of a complex number `c`, use the `inverse()` method:
 result = c.inverse()
 ```
 
-### Modulus
+### moduli
 
-To calculate the modulus of a complex number `c`, use the `modulus()` method:
+To calculate the moduli of a complex number `c`, use the `moduli()` method:
 
 ```python
-result = c.modulus()
+result = c.moduli()
 ```
 
 ### Square Root
@@ -94,7 +94,7 @@ multiplication = c1 * c2
 division = c1 / c2
 conjugate = c1.conjugate()
 inverse = c1.inverse()
-modulus = c1.modulus()
+moduli = c1.moduli()
 sqrt_complex = c1.sqrt_complex()
 
 # Print results
@@ -104,7 +104,7 @@ print("Multiplication:", multiplication)
 print("Division:", division)
 print("Conjugate:", conjugate)
 print("Inverse:", inverse)
-print("Modulus:", modulus)
+print("moduli:", moduli)
 print("Square Root:", sqrt_complex)
 ```
 

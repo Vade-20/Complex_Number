@@ -111,7 +111,7 @@ class Complex:
         imag_new = f'+{imag_new}i' if imag_new>=0 else f'{imag_new}i'
         return Complex(f'{real_new}{imag_new}')
         
-    def congugate(self):
+    def conjugate(self):
         real_new = self.__real
         imag_new = -self.__imag
         imag_new = f'+{imag_new}i' if imag_new>=0 else f'{imag_new}i'
@@ -123,14 +123,14 @@ class Complex:
         imag_new =f'+{imag_new}i'if imag_new>=0 else f'{imag_new}i'
         return Complex(f'{real_new}{imag_new}')
     
-    def modulous(self):
+    def moduli(self):
         return sqrt((self.__real**2)+(self.__imag**2))
     
     def sqrt_complex(self):
         a = self.__real
         b = self.__imag
-        real_new = sqrt((self.modulous()+a)/2)
-        imag_new = sqrt((self.modulous()-a)/2)
+        real_new = sqrt((self.moduli()+a)/2)
+        imag_new = sqrt((self.moduli()-a)/2)
         if b<0:
             imag_new = -imag_new                 
         imag_new =f'+{imag_new}i'if imag_new>=0 else f'{imag_new}i'       
