@@ -110,4 +110,4 @@ print("Square Root:", sqrt_complex)
 
 ## Note
 
-The input complex numbers should be in the form `a+bi`, where `a` and `b` are real numbers. Make sure to provide valid complex numbers to avoid exceptions.
+The input complex numbers should be in the form `a+bi` or `bi+a`, where `a` and `b` are real numbers. Make sure to provide valid complex numbers to avoid exceptions.
