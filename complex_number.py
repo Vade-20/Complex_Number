@@ -126,18 +126,15 @@ class Complex:
     def modulous(self):
         return sqrt((self.__real**2)+(self.__imag**2))
     
-    def sqrt(self):
+    def sqrt_complex(self):
         a = self.__real
         b = self.__imag
-        real_new = Fraction(self.modulous()+a,2)
-        if b>0:
-            imag_new = Fraction(self.modulous()-a,2)
-        else:
-            imag_new = -Fraction(self.modulous()-a,2)
-            
-        imag_new = f'+{imag_new}i' if imag_new>=0 else f'{imag_new}i'
-        
-        return f'√({real_new}{imag_new})'
+        real_new = sqrt((self.modulous()+a)/2)
+        imag_new = sqrt((self.modulous()-a)/2)
+        if b<0:
+            imag_new = -imag_new                 
+        imag_new =f'+{imag_new}i'if imag_new>=0 else f'{imag_new}i'       
+        return f'±({real_new}{imag_new})'
     
     def __str__(self) -> str:
         if self.iscomplex():

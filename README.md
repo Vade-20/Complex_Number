@@ -1,83 +1,113 @@
-# Complex Number Class
+# Complex Number Operations
 
-This is a Python class that represents complex numbers. It provides various operations such as addition, subtraction, multiplication, and division on complex numbers. The class also includes methods to check if a given string represents a valid complex number.It take string as an argument.
+This is a Python class that allows you to perform various operations on complex numbers. It provides methods for addition, subtraction, multiplication, division, conjugate, inverse, modulus, and square root of complex numbers.
 
 ## Usage
 
-To use the `Complex` class, follow these steps:
+Instantiate the `Complex` class by providing a complex number in the form of a string. The string should follow the format `a+bi`, where `a` is the real part and `b` is the imaginary part. The following operations are supported:
 
-1. Import the required modules:
-   ```python
-   import re
-   from fractions import Fraction
-   ```
+### Addition
 
-2. Create an instance of the `Complex` class by passing a string representing a complex number to the constructor:
-   ```python
-   complex_number = Complex("3+4i")
-   ```
+To add two complex numbers `c1` and `c2`, use the `+` operator:
 
-3. Perform operations on complex numbers using the available methods. For example:
-   ```python
-   complex_number_1 = Complex("3+4i")
-   complex_number_2 = Complex("2-1i")
+```python
+result = c1 + c2
+```
 
-   # Addition
-   result = complex_number_1 + complex_number_2
+### Subtraction
 
-   # Subtraction
-   result = complex_number_1 - complex_number_2
+To subtract one complex number `c2` from another complex number `c1`, use the `-` operator:
 
-   # Multiplication
-   result = complex_number_1 * complex_number_2
+```python
+result = c1 - c2
+```
 
-   # Division
-   result = complex_number_1 / complex_number_2
-   ```
+### Multiplication
 
-4. Display the complex number using the `str` method or by accessing the `complex_number` property:
-   ```python
-   print(complex_number)  # Output: 3+4i
+To multiply two complex numbers `c1` and `c2`, use the `*` operator:
 
-   # Accessing individual components
-   print(complex_number.real)  # Output: 3
-   print(complex_number.imag)  # Output: 4i
-   ```
+```python
+result = c1 * c2
+```
 
-## Class Methods
+### Division
 
-The `Complex` class provides the following methods:
+To divide one complex number `c1` by another complex number `c2`, use the `/` operator:
 
-- `__init__(self, complex_number: str)`: Initializes a complex number object based on the provided string representation.
-- `iscomplex(self)`: Checks if the complex number is valid.
-- `__add__(self, second)`: Performs addition of two complex numbers.
-- `__sub__(self, second)`: Performs subtraction of two complex numbers.
-- `__mul__(self, second)`: Performs multiplication of two complex numbers.
-- `__truediv__(self, second)`: Performs division of two complex numbers.
-- `__str__(self) -> str`: Returns a string representation of the complex number.
+```python
+result = c1 / c2
+```
 
-## Properties
+### Conjugate
 
-The `Complex` class provides the following properties:
+To calculate the conjugate of a complex number `c`, use the `conjugate()` method:
 
-- `complex_number`: Returns the formatted string representation of the complex number.
-- `real`: Returns the real component of the complex number as a `Fraction` object.
-- `imag`: Returns the imaginary component of the complex number as a string.
+```python
+result = c.conjugate()
+```
+
+### Inverse
+
+To calculate the inverse of a complex number `c`, use the `inverse()` method:
+
+```python
+result = c.inverse()
+```
+
+### Modulus
+
+To calculate the modulus of a complex number `c`, use the `modulus()` method:
+
+```python
+result = c.modulus()
+```
+
+### Square Root
+
+To calculate the square root of a complex number `c`, use the `sqrt_complex()` method:
+
+```python
+result = c.sqrt_complex()
+```
+
+### String Representation
+
+To obtain a string representation of a complex number `c`, use the `str()` function or simply print the object:
+
+```python
+print(c)
+```
 
 ## Example
 
-Here's an example usage of the `Complex` class:
+Here's an example demonstrating the usage of the `Complex` class:
 
 ```python
-# Create a complex number object
-complex_number = Complex("3+4i")
+# Create complex numbers
+c1 = Complex("3+2i")
+c2 = Complex("1-4i")
 
 # Perform operations
-complex_number_2 = Complex("2-1i")
-result = complex_number + complex_number_2
+addition = c1 + c2
+subtraction = c1 - c2
+multiplication = c1 * c2
+division = c1 / c2
+conjugate = c1.conjugate()
+inverse = c1.inverse()
+modulus = c1.modulus()
+sqrt_complex = c1.sqrt_complex()
 
-# Display the result
-print(result)  # Output: 5+3i
+# Print results
+print("Addition:", addition)
+print("Subtraction:", subtraction)
+print("Multiplication:", multiplication)
+print("Division:", division)
+print("Conjugate:", conjugate)
+print("Inverse:", inverse)
+print("Modulus:", modulus)
+print("Square Root:", sqrt_complex)
 ```
 
-Please note that the provided string must represent a valid complex number for the operations to work correctly.
+## Note
+
+The input complex numbers should be in the form `a+bi`, where `a` and `b` are real numbers. Make sure to provide valid complex numbers to avoid exceptions.
