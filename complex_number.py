@@ -152,6 +152,3 @@ class Complex:
         else:
             raise Exception ("Please enter a complex number")
         
-a = Complex('5')
-b = Complex('5')
-print(a==b)
