@@ -38,6 +38,14 @@ To divide one complex number `c1` by another complex number `c2`, use the `/` op
 result = c1 / c2
 ```
 
+### Equality
+
+To check if complex number `c1` and `c2` are equal, use the `==` operator:
+
+```python
+result = c1==c2
+```
+
 ### Conjugate
 
 To calculate the conjugate of a complex number `c`, use the `conjugate()` method:
@@ -92,6 +100,7 @@ addition = c1 + c2
 subtraction = c1 - c2
 multiplication = c1 * c2
 division = c1 / c2
+equal = c1==c2
 conjugate = c1.conjugate()
 inverse = c1.inverse()
 moduli = c1.moduli()
@@ -102,6 +111,7 @@ print("Addition:", addition)
 print("Subtraction:", subtraction)
 print("Multiplication:", multiplication)
 print("Division:", division)
+print("Equality:",equal)
 print("Conjugate:", conjugate)
 print("Inverse:", inverse)
 print("moduli:", moduli)

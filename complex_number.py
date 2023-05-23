@@ -110,6 +110,16 @@ class Complex:
         imag_new =-Fraction(((x_1*y_2)-(y_1*x_2))/((x_2**2)+(y_2**2)))
         imag_new = f'+{imag_new}i' if imag_new>=0 else f'{imag_new}i'
         return Complex(f'{real_new}{imag_new}')
+    
+    def __eq__(self, __value: object) -> bool:
+        real1 = self.__real
+        real2 = __value.__real
+        imag1 = self.__imag
+        imag2 = __value.__imag
+        if real1==real2 and imag1==imag2:
+            return True
+        else:
+            return False
         
     def conjugate(self):
         real_new = self.__real
@@ -142,3 +152,6 @@ class Complex:
         else:
             raise Exception ("Please enter a complex number")
         
+a = Complex('5')
+b = Complex('5')
+print(a==b)
